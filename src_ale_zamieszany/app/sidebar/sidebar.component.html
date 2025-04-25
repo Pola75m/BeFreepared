@@ -1,0 +1,18 @@
+<body>
+  <div *ngIf="isLoggedIn()">
+    <div class="topnav">
+    <a *ngIf="!isLoggedIn()" class="logow" routerLink="/sign-in" routerLinkActive="active">Sign Up</a>
+    <a *ngIf="!isLoggedIn()" class="logow" routerLink="/login" routerLinkActive="active">Login</a>
+    
+    <a *ngIf="isLoggedIn()" (click)="logout()" style="cursor: pointer;" class="logow">Logout</a>
+    
+    <span class="nazwa">BeFreepared</span>
+    <a class="active" routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/my-lists" routerLinkActive="active">My Lists</a>
+    <a routerLink="/calendar" routerLinkActive="active">Calendar</a>
+    <a routerLink="/my-archives" routerLinkActive="active">My Archives</a>
+    <a routerLink="/editing" routerLinkActive="active">Edit my profile</a>
+    </div>
+    </div>
+  <router-outlet></router-outlet>
+</body>

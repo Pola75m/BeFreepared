@@ -1,0 +1,29 @@
+<h2>Edit Your Profile</h2>
+
+<form (ngSubmit)="updateProfile()">
+  <!-- LOGIN -->
+  <label>New Login:</label>
+  <input type="text" [(ngModel)]="newLogin" name="newLogin" required />
+  <p *ngIf="loginTaken" style="color: red;">Login already exists.</p>
+
+  <!-- PASSWORD -->
+  <label>New Password:</label>
+  <input type="password" [(ngModel)]="newPassword" name="newPassword" />
+
+  <label>Confirm Password:</label>
+  <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" />
+  <p *ngIf="passwordMismatch" style="color: red;">Passwords do not match.</p>
+
+  <button (click)="deleteAccount()">Delete My Account</button>
+
+  <!-- THEME -->
+  <div>
+    <label>Theme:</label>
+    <select [(ngModel)]="theme" name="theme" (change)="toggleTheme()">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
+
+  <button type="submit">Update</button>
+</form>

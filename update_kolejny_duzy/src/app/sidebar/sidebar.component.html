@@ -1,0 +1,19 @@
+<body>
+  <!--sprawdzenie czy user zalogowany-->
+  <div *ngIf="isLoggedIn()">
+    <div class="topnav">
+    <a *ngIf="!isLoggedIn()" class="logow" routerLink="/sign-in" routerLinkActive="active">Zarejestruj się</a>
+    <a *ngIf="!isLoggedIn()" class="logow" routerLink="/login" routerLinkActive="active">Zaloguj się</a>
+    
+    <!--jesli user zalogowany pokazuje navbar, jeśli nie nie pokazuje-->
+    <span class="nazwa">BeFreepared</span>
+    <a class="active" routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/my-lists" routerLinkActive="active">Moje zadania</a>
+    <a routerLink="/calendar" routerLinkActive="active">Kalendarz</a>
+    <a routerLink="/my-archives" routerLinkActive="active">Moje archiwa</a>
+    <a routerLink="/editing" routerLinkActive="active">Edytuj profil</a>
+    <a *ngIf="isLoggedIn()" (click)="logout()" style="cursor: pointer;" class="logow">Wyloguj</a>
+  </div>
+    </div>
+  <router-outlet></router-outlet>
+</body>

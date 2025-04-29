@@ -83,3 +83,22 @@
     font-weight: 600;
     margin-bottom: 30px;
   }
+
+  .calendar-grid-cell-today {
+    background-color: #e0f3ff;
+    border: 2px solid #007bff;
+    font-weight: bold;
+  }
+  
+  .calendar-grid-cell-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin: 2px auto 0 auto;
+  }
+  
+  .calendar-grid-cell:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }

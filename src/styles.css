@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/*to jest tylko tymczasowe*/
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
